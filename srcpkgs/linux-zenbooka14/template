@@ -1,21 +1,20 @@
 # Template file for 'linux-zenbooka14'
 pkgname=linux-zenbooka14
-version=6.15.0
+version=6.16.rc4
 revision=2
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 
-distfiles="https://gitlab.com/linux-kernel/linux-next/-/archive/next-20250522/linux-next-next-20250522.tar.gz"
+distfiles="https://github.com/Sombre-Osmoze/linux/archive/refs/heads/devices/zenbook/a14/UX3407RA.zip"
 
 
 checksum=a62aaf5a1b48f8625ce588116aea68bea9849182f34072ff37eeac6e35ef72c9
 
 python_version=3
 
-# XXX Restrict archs until a proper <arch>-dotconfig is available in FILESDIR.
-archs="x86_64* i686* aarch64*"
+archs="aarch64*"
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes
@@ -26,7 +25,7 @@ preserve=yes
 hostmakedepends="tar xz bc elfutils-devel flex gmp-devel kmod libmpc-devel
  pkg-config openssl-devel perl uboot-mkimage cpio pahole python3 zstd"
 
-_kernver="6.15.0-rc7-next-20250522_2"
+_kernver="6.16.0-rc7-20250620_0"
 triggers="kernel-hooks"
 kernel_hooks_version="${_kernver}"
 
