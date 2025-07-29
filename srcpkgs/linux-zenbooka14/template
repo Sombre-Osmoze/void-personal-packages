@@ -1,16 +1,16 @@
 # Template file for 'linux-zenbooka14'
 pkgname=linux-zenbooka14
-version=6.16.rc4
-revision=2
+version=6.16.rc6
+revision=4
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 
-distfiles="https://github.com/Sombre-Osmoze/linux/archive/refs/heads/devices/zenbook/a14/UX3407RA.zip"
+distfiles="https://github.com/Sombre-Osmoze/linux/archive/refs/heads/qcom-x1e-6.16-ux3407ra.zip"
 
 
-checksum=a62aaf5a1b48f8625ce588116aea68bea9849182f34072ff37eeac6e35ef72c9
+checksum=69e4b758212bf225375d865d93d3cd54d273d364ec2303f9dfc61950fb3549c8
 
 python_version=3
 
@@ -25,7 +25,7 @@ preserve=yes
 hostmakedepends="tar xz bc elfutils-devel flex gmp-devel kmod libmpc-devel
  pkg-config openssl-devel perl uboot-mkimage cpio pahole python3 zstd"
 
-_kernver="6.16.0-rc7-20250620_0"
+_kernver="6.16.0-rc6_4"
 triggers="kernel-hooks"
 kernel_hooks_version="${_kernver}"
 
